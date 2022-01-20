@@ -20,9 +20,9 @@ export default function Comments() {
 
 		for (var i = 0; i < state.comments.length; i++) {
 			if (
-				state.comments[i].name.toLowerCase().match(e.target.value) ||
-				state.comments[i].email.toLowerCase().match(e.target.value) ||
-				state.comments[i].body.toLowerCase().match(e.target.value)
+				state.comments[i].name.toLowerCase().match(e.target.value.toLowerCase()) ||
+				state.comments[i].email.toLowerCase().match(e.target.value.toLowerCase()) ||
+				state.comments[i].body.toLowerCase().match(e.target.value.toLowerCase())
 			) {
 				comments.push(state.comments[i]);
 
