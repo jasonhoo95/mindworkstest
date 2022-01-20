@@ -39,7 +39,7 @@ export default function Comments() {
 	}, []);
 	return (
 		<div>
-			<div style={{ background: "#548696" }} className="text-center">
+			<div style={{ background: "#548696", padding: "10px" }} className="text-center">
 				<div>Title:</div>
 				<h1 className="font-bold text-2xl">{state.title}</h1>
 			</div>
