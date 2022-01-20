@@ -11,7 +11,6 @@ export default function Home() {
 	async function fetchData() {
 		const data = await axios.get("https://jsonplaceholder.typicode.com/posts");
 		setState({ data: data.data });
-		console.log(state.data, "json data");
 	}
 
 	useEffect(() => {
@@ -19,7 +18,11 @@ export default function Home() {
 	}, []);
 	return (
 		<div>
-			<h1 className="text-3xl text-center font-bold">Comments Manager App</h1>
+			<div style={{ background: "black" }}>
+				<h1 style={{ padding: "20px", color: "white" }} className="text-3xl text-center font-bold">
+					Comments Manager App
+				</h1>
+			</div>
 			<div style={{ margin: "20px" }} class="grid grid-cols-4 gap-4 mobile-card">
 				{state.data.map((o, key) => {
 					return <CardView data={o} />;
